@@ -1,13 +1,13 @@
 import React from 'react'
 
-function AddTrackForm() {
+function AddTrackForm({addNewTrack}) {
   return (
-      <form>
+      <form onSubmit={addNewTrack}>
         <div>
-          <input value="" type="text" name="image" placeholder="Image URL"/>
-          <input value="" type="text" name="title" placeholder="title" />
-          <input value="" type="text" name="artist" placeholder="Artist" />
-          <input value="" type="number" name="BPM" placeholder="BPM" step="1.00" />
+          <input type="text" name="image" placeholder="Image URL"/>
+          <input type="text" name="title" placeholder="title" />
+          <input type="text" name="artist" placeholder="Artist" />
+          <input type="number" name="BPM" placeholder="BPM" step="1.00" />
         </div>
         <input className="" type="submit" value="Add Track" />
       </form>
